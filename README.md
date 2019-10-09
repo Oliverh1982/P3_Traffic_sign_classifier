@@ -35,6 +35,7 @@ And here are images for visualization of the dataset:
 ### 2. Design and Test a Model Architecture
 
 2.1 Image Processing
+
 As a first step, I decided to convert the images to grayscale. Here is an example of a traffic sign image before and after grayscaling.
 
 ![images](pics/gray.png)
@@ -44,7 +45,43 @@ The second step is to normalized the images. The suggest value was (pixel - 128)
 ![images](pics/normalized.png)
 
 2.2 Model Architecture
-    My final model consisted of the following layers:
 
+My final model consisted of the following layers:
+
+![images](pics/model.png)
     
  
+2.3 Trained model
+
+I used the Adam optimizer. The final settings used were:
+- batch size: 64 
+- epochs: 12 
+- learning rate: 0.001 
+- mu: 0 
+- sigma: 0.1 
+- dropout keep probability: 0.5 
+
+2.4 Final model result
+
+My final model results were:
+- training set accuracy : 0.990
+- validation set accuracy : 0.965
+- test set accuracy : 0.947
+
+### 3. Test a Model on New Images
+
+Here are five German traffic signs that I found on the web:
+
+![images](pics/test_img.png)
+
+And the test reslut:
+
+![images](pics/result1.png)
+ 
+For these test images, the accuracy is 100%!
+
+3.1 Output Top 5 Softmax Probabilities For Each Image
+
+The following are top five Softmax probabilities for each of my test image:
+
+![images](pics/result2.png)
